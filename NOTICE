@@ -1,0 +1,9 @@
+Spoofwatch
+Copyright (c) 2026 Cognis Digital LLC (Wyoming, USA).
+
+Licensed under the Cognis Open Collaboration License (COCL) v1.0 — see LICENSE.
+Part of the Cognis Neural Suite (https://cognis.digital).
+
+Zero-dependency, offline. Operates on position reports you supply; performs no
+transmission and no interference of any kind — it is a defensive detection and
+situational-awareness tool.

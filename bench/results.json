@@ -1,0 +1,9 @@
+{
+  "scenes": 20,
+  "jamming_detect_rate": 1.0,
+  "jamming_loc_err_km": 10.6,
+  "jamming_false_zones_total": 2,
+  "spoof_recall": 1.0,
+  "spoof_precision": 0.997,
+  "spoof_origin_err_km": 0.3
+}

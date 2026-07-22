@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spoofwatch"
+version = "0.1.0"
+description = "Detect & map GPS/GNSS jamming and spoofing from ADS-B/AIS position feeds — zero-dependency, offline. Cognis Digital."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Cognis Digital LLC" }]
+keywords = ["gnss", "gps-spoofing", "gps-jamming", "adsb", "ais", "osint", "geoint", "situational-awareness", "cognis"]
+license = { text = "COCL-1.0" }
+dependencies = []
+
+[project.urls]
+Homepage = "https://cognis.digital"
+Repository = "https://github.com/cognis-digital/spoofwatch"
+
+[project.scripts]
+spoofwatch = "spoofwatch.cli:main"
+
+[tool.setuptools]
+packages = ["spoofwatch"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
