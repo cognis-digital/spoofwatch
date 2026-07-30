@@ -27,4 +27,6 @@ __all__ = [
     "multipath",
     # additive multi-antenna (CRPA) spatial spoofing detector (v0.7 build-out)
     "crpa",
+    # additive GNSS dataset registry + C/N0 plausibility gate (v0.8 build-out)
+    "datasets",
 ]
