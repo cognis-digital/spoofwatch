@@ -113,6 +113,59 @@ GNSS_DATASETS: List[GnssDataset] = [
                 DatasetKind.TAXONOMY, "n/a", "reference", "research",
                 "canonical attack taxonomy (meaconing / selective-delay / non-coherent / "
                 "coherent matched-power) + detection-metric definitions"),
+
+    # ---- expanded July 2026 survey: additional real corpora ----
+    GnssDataset("Tuni2025-Spoofing", "https://zenodo.org/records/15470143",
+                DatasetKind.SPOOFING_IQ, "Galileo E1", "30 GB, 50 MSps USRP-2945R",
+                "open", "Tampere University lab-controlled Galileo E1 spoofing IQ (CC-BY-4.0)"),
+    GnssDataset("RFF-Fingerprinting-IQ", "https://zenodo.org/records/13846381",
+                DatasetKind.SPOOFING_IQ, "GPS L1", "3.3 TB total / 6.4 GB core", "open",
+                "Oct-2022 raw IQ clean vs spoofed PRNs for RF-fingerprint anti-spoof (CC-BY-4.0)"),
+    GnssDataset("FraunhoferIIS-Jammertest-2025", "https://github.com/FelixOtt94/FraunhoferIIS_Jammertest2025",
+                DatasetKind.JAMMING_IQ, "Galileo E1 + E5a", "chunked HDF5, 8-bit IQ",
+                "non-commercial",
+                "Innosense + CRPA array, labeled jammer type/dBm/bandwidth; jam/spoof/meaconing/"
+                "multi-emitter, Andoya 2025"),
+    GnssDataset("Fraunhofer-Highway-ds2", "https://ieee-dataport.org/documents/gnss-interference-spectrum-highway-dataset-2",
+                DatasetKind.JAMMING_IQ, "Galileo E1 + E6", "14.3 GB", "non-commercial",
+                "real German-highway station recordings, 2 interference classes + clean; "
+                "domain-adaptation/few-shot"),
+    GnssDataset("Fraunhofer-LowCost-Indoor", "https://ieee-dataport.org/documents/gnss-interference-spectrum-low-cost-controlled-indoor-dataset",
+                DatasetKind.JAMMING_IQ, "Galileo E1 + E6", "~349 MB, 9 classes",
+                "non-commercial",
+                "labeled FreqHopper/Modulated/Noise/Multitone/Pulsed on spectrum vs low-cost sensor"),
+    GnssDataset("Fraunhofer-Processed-Features", "https://ieee-dataport.org/documents/gnss-processed-interference-features",
+                DatasetKind.TAXONOMY, "GNSS L-band", "54.85 GB, 72M features", "research",
+                "processed spectral features: single/multi-tone, linear chirp, band-limited "
+                "noise + clean; low-resource classification"),
+    GnssDataset("GNSS-Interference-Spoofing-DiB", "https://www.sciencedirect.com/science/article/pii/S2352340924002713",
+                DatasetKind.INTERFERENCE_EVENT, "GPS/GLONASS/Galileo/BeiDou/QZSS (8 bands)",
+                ">13M JSON files", "open",
+                "3 scenarios (normal / commercial jammer / HackRF SDR spoofing) full receiver "
+                "observations (Data in Brief, CC-BY)"),
+    GnssDataset("SimulaMet-Jammertest-2025-NMEA", "https://ieee-dataport.org/documents/simulamet-jammertest-2025-nmea-derived-dataset",
+                DatasetKind.INTERFERENCE_EVENT, "multi-constellation NMEA", "70+ CSV/JSON",
+                "research",
+                ">2000 km mobility + multi-day static, Jammertest 2025; jam/meacon/time-spoof at "
+                "application layer"),
+    GnssDataset("UAV-Attack-PX4", "https://ieee-dataport.org/open-access/uav-attack-dataset",
+                DatasetKind.INTERFERENCE_EVENT, "GPS L1", "683.88 MB", "research",
+                "PX4 flight logs with HackRF/GPS-SDR-SIM false-coordinate spoofing + Gaussian "
+                "jamming in RF-denied facility"),
+    GnssDataset("S-ICDF-Sionna", "https://gitlab.cc-asp.fraunhofer.de/darcy_gnss/sicdf_dataset",
+                DatasetKind.JAMMING_IQ, "GNSS L-band (array/AoA)", "102 configs", "research",
+                "GPU-simulated jam+spoof across array patterns/bandwidths/reflection depth for "
+                "detect-classify-localize"),
+    GnssDataset("CG-SpoofGNSS", "https://github.com/agilawood4/CG-SpoofGNSS",
+                DatasetKind.SPOOFING_IQ, "GPS L1/L5/L1+L5", "~10.2 GB, 9.36M obs rows",
+                "research",
+                "consumer smartphones/smartwatch + u-blox reference; normal/static-spoof/"
+                "dynamic-spoof with reference trajectories"),
+    GnssDataset("SCINDA-Lisbon-Iono", "https://www.sciencedirect.com/science/article/pii/S235234092030860X",
+                DatasetKind.IONO_REFERENCE, "GPS L1 (S4/TEC/ROTI)", "2014-2019 series",
+                "open",
+                "natural scintillation baseline to discriminate ionospheric degradation from "
+                "spoofing/jamming (Data in Brief, CC-BY)"),
 ]
 
 
