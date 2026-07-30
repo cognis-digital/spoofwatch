@@ -12,4 +12,19 @@ By Cognis Digital — situational awareness for a contested-navigation world.
 from __future__ import annotations
 
 __version__ = "0.1.0"
-__all__ = ["records", "synth", "jamming", "spoofing", "detect", "geo", "cli"]
+__all__ = [
+    "records", "synth", "jamming", "spoofing", "detect", "geo", "cli",
+    # additive detector + resilient-PNT modules (v0.2 build-out)
+    "linalg", "ecef", "raim", "signal", "osnma", "clockbias", "inertial",
+    "constellation", "meaconing", "zones", "classify", "fusion", "altpnt", "aoa",
+    # additive PNT-resilience modules (v0.3 build-out)
+    "doppler", "kalman", "skygeom", "confidence",
+    # additive receiver-integrity + resilient-timing modules (v0.4 build-out)
+    "cn0track", "noisefloor", "holdover", "codecarrier", "pnttrack",
+    # additive GNSS-denied navigation module (v0.5 build-out)
+    "terrainnav",
+    # additive signal-quality / reflection-awareness module (v0.6 build-out)
+    "multipath",
+    # additive multi-antenna (CRPA) spatial spoofing detector (v0.7 build-out)
+    "crpa",
+]
